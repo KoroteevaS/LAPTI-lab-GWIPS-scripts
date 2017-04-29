@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>CONFIG_FILE_FORM</title>
+        <STYLE>
+           background: color = "grey";
+        </STYLE>
+    </head>
+    <body>
+       
+        <h1>Config_Form</h1>
+        
+        <form action="config_form.py" method="get">
+         <FIELDSET>
+        
+         <LEGEND>STUDY</LEGEND>
+                <input type="text" name="study"  id="study" value=""> STUDY <br>
+                <input type="text" name="substudy"  id="substudy" value=""> SUBSTUDY <br>
+                <input type="text" name="inputfile"  id="inputfile" value=""> SUBSTUDY <br>
+
+
+         </FIELDSET>
+
+         <FIELDSET>
+             <LEGEND>Choose the sequence type </LEGEND>
+                <input type="radio" name="seq"  id="mRNA" value="mRNA">mRNA 
+                <input type="radio" name="seq"  id="Ribo" value="Ribo">Ribo_Seq<br>             
+         </FIELDSET>
+            <BR>
+         <FIELDSET>
+        
+         <LEGEND>Is it trimmed</LEGEND>
+                <input type="radio" name="trim"  id="yes" value="" >Yes                 
+                <input type="radio" name="trim"  id="no" value="" >No<br>
+         </FIELDSET>
+         <BR>
+         <FIELDSET>
+        
+         <LEGEND>Adaptor for cut</LEGEND>
+                <input type="text" name="adaptor"  id="adaptor" value=""> <br>
+         </FIELDSET>
+   
+         <FIELDSET>
+         <LEGEND>Bowtie remove ribosomal rRNA parameters </LEGEND>
+                <SELECT name="rrna" value="">
+                <OPTION VALUE=""></OPTION>
+                <OPTION VALUE="">---</OPTION>
+                <OPTION id = "mouse" VALUE = "Mouse_rRNA"> Mouse </option>
+                <OPTION id = "human" VALUE = "human_rRNA"> Human </option> 
+                <OPTION id = "rat" VALUE = "R_norvegicus_rRNA"> R_norvegicus</option>
+                <OPTION id = "bsubtilis" VALUE ="Bsubtilis"> Bsubtilis </option>
+                <OPTION id = "c.crescentus" VALUE = "C.crescentus_rRNA_indexes"> C.crescentus_rRNA_indexes </option> 
+                <OPTION id = "plasmodiium_falciparum" VALUE = "Plasmodiium_falciparum_rRNA">Plasmodiium_falciparum_rRNA </option>
+                <OPTION id = "r_norvegicus" VALUE ="R_norvegicus_rRNA">  R_norvegicus_rRNA </option>
+                <OPTION id = "ecoli" VALUE = "T.brucei_rRNA"> T.brucei_rRNA </option>             
+                <OPTION id = "yeast" VALUE ="Yeast_rRNA"> Yeast </option>
+                <OPTION id = "zebrafish" VALUE = "Zebrafish_rRNA"> Zebrafish </option> 
+                </SELECT>
+         </FIELDSET>
+         <FIELDSET>
+         <LEGEND>Bowtie align to genome parameters</LEGEND>
+                <SELECT name="genind" value="">
+                <OPTION VALUE=""></OPTION>
+                <OPTION VALUE="">---</OPTION>
+                <OPTION id = "mus_musculus" VALUE = "Mus_musculus_UCSC"> Mus_musculus </option>
+                <OPTION id = "homo_sapiens" VALUE = "Homo_sapiens_UCSC"> Homo_sapiens </option>     
+                <OPTION id = "bacillus_subtilis" VALUE = "Bacillus_subtilis_168_Ensembl"> Bacillus_subtilis_168_Ensembl </option>
+                <OPTION id = "bacillusSubtilis_NC" VALUE = "bacillusSubtilis_NC_000964.3.fasta"> bacillusSubtilis_NC_000964.3.fasta </option> 
+                <OPTION id = "bacteriophage" VALUE ="Bacteriophage_lambda"> Bacteriophage_lambda</option>
+                <OPTION id = "caenorhabditis_elegans" VALUE = "Caenorhabditis_elegans_UCSC"> Caenorhabditis_elegans</option> 
+                <OPTION id = "c_albicans_SC5314" VALUE = "C_albicans_SC5314">C_albicans_SC5314</option>
+                <OPTION id = "caulobacter_crescentus" VALUE ="Caulobacter_crescentus">  Caulobacter_crescentus</option>
+                <OPTION id = "danio_rerio" VALUE = "Danio_rerio_UCSC"> Danio_rerio </option>             
+                <OPTION id = "drosophila_melanogaster" VALUE ="Drosophila_melanogaster_UCSC"> Drosophila_melanogaster</option>
+                <OPTION id = "e.coli" VALUE = "E.coli">E.coli</option> 
+                <OPTION id = "e.coli_K12_MG1655" VALUE = "E.coli_K12_MG1655">E.coli_K12_MG1655</option> 
+                <OPTION id = "humanCytomegalovirus" VALUE = "HumanCytomegalovirus_HHV5">HumanCytomegalovirus_HHV5</option> 
+                <OPTION id = "p.falciparum" VALUE = "P.falciparum">P.falciparum</option> 
+                <OPTION id = "saccharomyces_cerevisiae" VALUE = "Saccharomyces_cerevisiae">Saccharomyces_cerevisiae</option> 
+                <OPTION id = "s.pombe" VALUE = "S.pombe">S.pombe</option> 
+                <OPTION id = "t.brucei" VALUE = "T.brucei">T.brucei</option> 
+                <OPTION id = "xenopus_laevis" VALUE = "Xenopus_laevis">S.pombe</option> 
+                </SELECT>                
+         </FIELDSET>
+         <BR>
+         <FIELDSET>
+         <LEGEND>Ribosome profile info</LEGEND>
+                <input type="radio" name="rpscr"  id="RNase1" value="RNase1" >Rnase1
+                <input type="radio" name="rpscr"  id="RNase2" value="RNase2" >Rnase2<br> 
+                <SELECT name="genfa" value="">
+                <OPTION VALUE=""></OPTION>
+                <OPTION VALUE="">---</OPTION>
+                <OPTION id = "mus_musculus" VALUE = "Mus_musculus_UCSC"> Mus_musculus </option>
+                <OPTION id = "homo_sapiens" VALUE = "Homo_sapiens_UCSC"> Homo_sapiens </option>     
+                <OPTION id = "bacillus_subtilis" VALUE = "Bacillus_subtilis_168_Ensembl"> Bacillus_subtilis_168_Ensembl </option>
+                <OPTION id = "bacillusSubtilis_NC" VALUE = "bacillusSubtilis_NC_000964.3.fasta"> bacillusSubtilis_NC_000964.3.fasta </option> 
+                <OPTION id = "bacteriophage" VALUE ="Bacteriophage_lambda"> Bacteriophage_lambda</option>
+                <OPTION id = "caenorhabditis_elegans" VALUE = "Caenorhabditis_elegans_UCSC"> Caenorhabditis_elegans</option> 
+                <OPTION id = "c_albicans_SC5314" VALUE = "C_albicans_SC5314">C_albicans_SC5314</option>
+                <OPTION id = "caulobacter_crescentus" VALUE ="Caulobacter_crescentus">  Caulobacter_crescentus</option>
+                <OPTION id = "danio_rerio" VALUE = "Danio_rerio_UCSC"> Danio_rerio </option>             
+                <OPTION id = "drosophila_melanogaster" VALUE ="Drosophila_melanogaster_UCSC"> Drosophila_melanogaster</option>
+                <OPTION id = "e.coli" VALUE = "E.coli">E.coli</option> 
+                <OPTION id = "e.coli_K12_MG1655" VALUE = "E.coli_K12_MG1655">E.coli_K12_MG1655</option> 
+                <OPTION id = "humanCytomegalovirus" VALUE = "HumanCytomegalovirus_HHV5">HumanCytomegalovirus_HHV5</option> 
+                <OPTION id = "p.falciparum" VALUE = "P.falciparum">P.falciparum</option> 
+                <OPTION id = "saccharomyces_cerevisiae" VALUE = "Saccharomyces_cerevisiae">Saccharomyces_cerevisiae</option> 
+                <OPTION id = "s.pombe" VALUE = "S.pombe">S.pombe</option> 
+                <OPTION id = "t.brucei" VALUE = "T.brucei">T.brucei</option> 
+                <OPTION id = "xenopus_laevis" VALUE = "Xenopus_laevis">S.pombe</option> 
+              </SELECT>                
+                <input type="radio" name="offset"  id="rp12" value="12" >12
+                <input type="radio" name="offset"  id="rp15" value="15" >15<br>
+         </FIELDSET>
+         <FIELDSET> 
+         <LEGEND>Ribosome Coverage parameters</LEGEND>
+                <input type="text"   id="chromsize" value=""> <br>
+               <SELECT name="chromsize" value="">
+                <OPTION VALUE=""></OPTION>
+                <OPTION VALUE="">---</OPTION>
+                <OPTION id = "arab" VALUE = "arab.chrom.sizes"> arab </option>
+                <OPTION id = "arab_noChr" VALUE = "arab_noChr.chrom.sizes"> arab_noChr </option>     
+                <OPTION id = "baciSubt2" VALUE = "baciSubt2.chrom.sizes"> baciSubt2 </option>
+                <OPTION id = "caulCres" VALUE = "caulCres.chrom.sizes"> caulCres </option>  
+                <OPTION id = "ce10" VALUE = "ce10.chrom.sizes"> ce10 </option>
+                <OPTION id = "danRer7" VALUE = "danRer7.chrom.sizes"> danRer7 </option>     
+                <OPTION id = "dm3" VALUE = "dm3.chrom.sizes"> dm3 </option>
+                <OPTION id = "ecoli" VALUE = "ecoli.chrom.sizes"> caulCres </option>   
+                <OPTION id = "hg19" VALUE = "hg19.chrom.sizes">hg19 </option>
+                <OPTION id = "HHV5" VALUE = "HHV5.chrom.sizes"> HHV5 </option>     
+                <OPTION id = "fetch" VALUE = "baciSubt2.chrom.sizes"> baciSubt2 </option>
+                <OPTION id = "caulCres" VALUE = "caulCres.chrom.sizes"> caulCres </option>  
+                <OPTION id = "ce10" VALUE = "ce10.chrom.sizes"> ce10 </option>
+                <OPTION id = "danRer7" VALUE = "danRer7.chrom.sizes"> danRer7 </option>     
+                <OPTION id = "lambda" VALUE = "lambda.chrom.sizes"> lambda </option>
+                <OPTION id = "mm10" VALUE = "mm10"> mm10 </option> 
+                <OPTION id = "plasFalc1" VALUE = "plasFalc1.chrom.sizes">plasFalc1 </option>
+                <OPTION id = "plasmodiumFalciparum" VALUE = "plasmodiumFalciparum.chrom.sizes">plasmodiumFalciparum </option>     
+                <OPTION id = "rn6" VALUE = "rn6.chrom.sizes"> rn6 </option>
+                <OPTION id = "sacCer3" VALUE = "sacCer3.chrom.sizes"> sacCer3 </option>  
+                <OPTION id = "s.pombe" VALUE = "s.pombe.chrom.sizes"> s.pombe </option>
+                <OPTION id = "TREU927" VALUE = "TREU927.chrom.sizes"> TREU927 </option>     
+                <OPTION id = "xenLaevis" VALUE = "xenLaevis.chrom.sizes"> xenLaevis </option>  
+             </SELECT>              
+         </FIELDSET>
+                <input type="submit" value="Submit" color = #FFD175 />
+                <input type="reset" value="Reset" color = #FFD175/> 
+        
+        </form>      
+        <p>Input your data</p>
+        
+    </body>
+</html>
+
