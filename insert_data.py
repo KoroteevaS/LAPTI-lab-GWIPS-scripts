@@ -10,7 +10,7 @@ import os
 
 
 def Creation (file0, path):
-         print( 'haha %s' % (file0))
+         #print( 'here %s' % (file0))
          try:        
                      connection = db.connect(host = 'localhost', user = 'gwips', password = '', database ='rn6')
                      cursor = connection.cursor(db.cursors.DictCursor)
